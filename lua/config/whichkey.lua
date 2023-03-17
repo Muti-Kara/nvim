@@ -69,20 +69,12 @@ local mappings = {
 	["w"] = { "<cmd>w!<CR>", "Save" },
 	["q"] = { "<cmd>q!<CR>", "Quit" },
 	["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
+	["L"] = { "<cmd>Lazy<CR>", "Lazy" },
 
 	f = {
 		name = "Fuzzy Search",
 		f = { "<cmd>Telescope find_files<cr>", "Find Files" },
 		t = { "<cmd>Telescope live_grep<cr>", "Find Text" },
-	},
-
-	p = {
-		name = "Packer",
-		c = { "<cmd>PackerCompile<cr>", "Compile" },
-		i = { "<cmd>PackerInstall<cr>", "Install" },
-		s = { "<cmd>PackerSync<cr>", "Sync" },
-		S = { "<cmd>PackerStatus<cr>", "Status" },
-		u = { "<cmd>PackerUpdate<cr>", "Update" },
 	},
 
 	u = {

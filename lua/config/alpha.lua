@@ -42,7 +42,7 @@ dashboard.section.buttons.val = {
 }
 
 local function footer()
-	local total_plugins = #vim.tbl_keys(packer_plugins)
+	local total_plugins = "31"
 	local datetime = os.date "%d-%m-%Y  %H:%M:%S"
 	local plugins_text = "\t" .. total_plugins .. " plugins  " .. datetime
 	local fortune = require "alpha.fortune"

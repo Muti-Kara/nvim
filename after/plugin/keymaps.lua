@@ -2,9 +2,6 @@ local opts = { noremap = true, silent = true }
 local command_opts = { noremap = true }
 local map = vim.api.nvim_set_keymap
 
-map("", "<Space>", "<Nop>", opts)
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
 
 -- Macros
 map("n", "q", "<Nop>", opts)

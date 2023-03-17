@@ -95,18 +95,11 @@ cmp.setup {
 		format = function(entry, vim_item)
 			vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
 			vim_item.menu = ({
-				cmp_tabnine = "[TabNine]",
 				luasnip = "[Snippet]",
 				nvim_lsp = "[LSP]",
 				buffer = "[Buffer]",
 				path = "[Path]",
 			})[entry.source.name]
-			if entry.source.name == "cmp_tabnine" then
-				if entry.completion_item.data ~= nil and  entry.completion_item.data.detail ~= nil then
-					menu = entry.completion_item.data.detail .. " " .. menu
-				end
-			vim_item.kind = ""
-			end
 			return vim_item
 		end,
 	},
@@ -115,7 +108,6 @@ cmp.setup {
 		{ name = "luasnip" },
 		{ name = "buffer" },
 		{ name = "path" },
-		{ name = "cmp_tabnine" },
 	},
 	confirm_opts = {
 		behavior = cmp.ConfirmBehavior.Replace,
@@ -129,6 +121,3 @@ cmp.setup {
 		native_menu = false,
 	},
 }
-
-local tabnine = require "cmp_tabnine.config"
-tabnine:setup { max_lines = 1000, max_num_results = 20, sort = true }
