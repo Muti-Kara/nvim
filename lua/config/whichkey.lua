@@ -64,8 +64,8 @@ local opts = {
 
 local mappings = {
 	["a"] = { "<cmd>Alpha<cr>", "Alpha" },
-	["b"] = { "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>", "Buffers" },
-	["e"] = { "<cmd>Neotree toggle<cr>", "Explorer" },
+	["b"] = { "<cmd>Telescope buffers<cr>", "Buffers" },
+	["e"] = { "<cmd>Neotree float toggle<cr>", "Explorer" },
 	["w"] = { "<cmd>w!<CR>", "Save" },
 	["q"] = { "<cmd>q!<CR>", "Quit" },
 	["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
@@ -84,15 +84,7 @@ local mappings = {
 		n = { "<cmd>lua _NCDU_TOGGLE()<CR>", "Disk Manager" },
 		b = { "<cmd>lua _BTOP_TOGGLE()<CR>", "Process Viewer" },
 		p = { "<cmd>lua _PYTHON_TOGGLE()<CR>", "Python" },
-		s = { "<cmd>lua _STACK_OVERFLOW()<CR>", "Stack Overflow" },
 		c = { "<cmd>lua require('utils.cheat').cht()<CR>", "Cheat Sheet" },
-	},
-
-	g = {
-		name = "Git",
-		o = { "<cmd>Telescope git_status<cr>", "Open changed file" },
-		b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
-		c = { "<cmd>Telescope git_commits<cr>", "Checkout commit" },
 	},
 
 	l = {

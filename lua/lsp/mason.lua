@@ -1,5 +1,6 @@
 local servers = {
-	-- "pylsp",
+	"pylsp",
+	"clangd",
 }
 
 local settings = {

@@ -52,24 +52,6 @@ function _LAZYDOCKER_TOGGLE()
 	lazydocker:toggle()
 end
 
-function _STACK_OVERFLOW()
-  local buf = vim.api.nvim_get_current_buf()
-  lang = ""
-  file_type = vim.api.nvim_buf_get_option(buf, "filetype")
-  vim.ui.input({ prompt = "so input: ", default = file_type .. " " }, function(input)
-    local cmd = ""
-    if input == "" or not input then
-      return
-    elseif input == "h" then
-      cmd = "-h"
-    else
-      cmd = input
-    end
-    cmd = "so " .. cmd
-	Terminal:new({cmd = cmd, hidden = true}):toggle()
-  end)
-end
-
 local ncdu = Terminal:new({ cmd = "ncdu /", hidden = true })
 
 function _NCDU_TOGGLE()

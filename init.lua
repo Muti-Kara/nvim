@@ -37,7 +37,6 @@ return require('lazy').setup({
 		dependencies = {"MunifTanjim/nui.nvim", "rcarriga/nvim-notify"},
 	},
 
-
 	{"hrsh7th/nvim-cmp", config = function() require "config.cmp" end},
 	"hrsh7th/cmp-buffer",
 	"hrsh7th/cmp-path",

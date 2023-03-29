@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [ -z "$1" ]; then
+	source "./.venv/bin/activate"
+else
+	source "/home/yuio/.venv/$1/bin/activate"
+fi

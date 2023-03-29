@@ -1,0 +1,6 @@
+#!/bin/bash
+
+old_text=$1
+new_text=$2
+
+grep -rl $old_text . | xargs sed -i "s/$old_text/$new_text/g"
